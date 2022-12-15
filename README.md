@@ -12,6 +12,22 @@ The following features are exposed:
 * set/get PWM duty cycle (0-100) applied during reduced-current phase, when efficient current profile is enabled.
 * set/get peak current duration: full current (100% duty cycle) is applied to the solenoid for this time before switching to the reduced-current PWM duty cycle.
 
+The features listed above are exposed through a text-based menu with which the user interacts via UART3:
+```
+Initialized NU32.
+Initialized solenoid interface.
+
+Enter a single-digit menu option:
+        0: Solenoid OFF
+        1: Solenoid ON
+        2: Reduced-current holding OFF
+        3: Reduced-current holding ON
+        4: Get hold-phase PWM duty cycle
+        5: Set hold-phase PWM duty cycle
+        6: Get peak-current duration
+        7: Set peak-current duration
+```
+
 ## Project Structure
 This project contains the following C and header files:
 * `main.c`: the program entry point; implements user interface via switch statement inside an infinite while loop
