@@ -22,6 +22,9 @@ void toggle_solenoid(uint8_t);
 // enable/disable hold-phase current reduction via PWM:
 void toggle_current_reduction(uint8_t);
 
+// apply a PWM voltage to the solenoid, with a specific duty cycle:
+void PWM_solenoid(uint8_t);
+
 // get/set duration (milliseconds) of peak-current phase of solenoid actuation:
 uint16_t get_peak_duration_ms(void);
 void 	 set_peak_duration_ms(uint16_t);
